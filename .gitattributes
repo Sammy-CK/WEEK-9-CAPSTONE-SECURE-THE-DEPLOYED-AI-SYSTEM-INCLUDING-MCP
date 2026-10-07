@@ -1,2 +1,3 @@
 prompts/*.txt text eol=lf
+knowledge/*.md text eol=lf
 *.json text eol=lf

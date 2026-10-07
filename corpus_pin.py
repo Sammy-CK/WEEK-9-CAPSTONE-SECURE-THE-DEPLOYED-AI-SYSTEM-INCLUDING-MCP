@@ -7,7 +7,8 @@ KNOWLEDGE = Path('knowledge/ors_faq.md')
 
 
 def sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    text = path.read_text(encoding="utf-8").replace("\r\n", "\n")
+    return hashlib.sha256(text.encode()).hexdigest()
 
 
 if __name__ == '__main__':
