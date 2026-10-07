@@ -1,0 +1,29 @@
+name: ci-security
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    # Disposable CI-only values for pytest (NOT production secrets).
+    # Production JWT comes from Key Vault / host env per secret_refs.yaml.
+    env:
+      JWT_SECRET: ci-test-jwt-secret-32chars-minimum!!
+      SUBJECT_PEPPER: week9-capstone-pepper-for-fixtures-only
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - run: python check_inventory.py
+      - run: python check_brief.py
+      - run: python check_corpus_pin.py
+      - run: python check_gitignore.py
+      - run: python scripts/check_mcp_health.py
+      - name: resolve_secrets boot check (injected env, not committed)
+        run: python resolve_secrets.py

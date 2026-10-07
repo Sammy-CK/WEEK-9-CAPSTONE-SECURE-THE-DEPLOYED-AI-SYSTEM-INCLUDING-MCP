@@ -1,0 +1,1 @@
+{"job_id": "9d150643-6d75-4832-a4d0-f42d67ad1c0d", "run_date": "2024-08-18", "clock": "fixture: frozen NOW, not a production run", "dataset": "triage_messages", "range": {"cut_ts": 1716224000, "now_ts": 1724000000}, "count_dropped": 1, "count_kept": 1, "rule": "90-day retention for triage_messages"}

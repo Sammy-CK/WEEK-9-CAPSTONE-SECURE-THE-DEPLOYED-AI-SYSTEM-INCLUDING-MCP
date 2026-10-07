@@ -1,0 +1,2 @@
+pytest tests/test_transit_policy.py::test_cleartext_production_host_denied
+transit_ok("http://api.afyaplus.ke/triage") -> False

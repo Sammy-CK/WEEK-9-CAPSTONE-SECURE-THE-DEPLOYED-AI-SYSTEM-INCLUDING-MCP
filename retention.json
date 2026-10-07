@@ -1,0 +1,5 @@
+{
+    "triage_messages": {"days": 90,  "notes": "hashed and redacted payloads"},
+    "audit_logs":      {"days": 180, "notes": "actor, action, resource; no raw clinical text"},
+    "knowledge_files": {"days": null, "notes": "not personal data; pinned in git"}
+  }

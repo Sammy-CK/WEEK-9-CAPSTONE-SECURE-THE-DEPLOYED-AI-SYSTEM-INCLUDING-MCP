@@ -1,0 +1,34 @@
+[
+  {
+    "name": "triage_messages",
+    "purpose": "Advisory urgency text from patients; stubbed in capstone",
+    "lawful_basis": "teaching: legitimate_interests_or_consent_review",
+    "retention_days": 90,
+    "special_category": true,
+    "owner": "clinical_ops"
+  },
+  {
+    "name": "jwt_subjects",
+    "purpose": "Authenticated clinic user identifiers in token claims",
+    "lawful_basis": "teaching: contract_or_legitimate_interests_review",
+    "retention_days": 30,
+    "special_category": false,
+    "owner": "platform_ops"
+  },
+  {
+    "name": "mcp_stock_queries",
+    "purpose": "Allowlisted clinic stock lookups via logistics MCP",
+    "lawful_basis": "teaching: contract_review",
+    "retention_days": 180,
+    "special_category": false,
+    "owner": "logistics_ops"
+  },
+  {
+    "name": "audit_logs",
+    "purpose": "Structured actor/action/resource with redacted payload hashes",
+    "lawful_basis": "teaching: legal_obligation_or_legitimate_interests_review",
+    "retention_days": 180,
+    "special_category": false,
+    "owner": "security_ops"
+  }
+]

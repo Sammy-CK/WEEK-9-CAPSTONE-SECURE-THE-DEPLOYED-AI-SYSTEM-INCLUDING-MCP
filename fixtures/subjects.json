@@ -1,0 +1,6 @@
+[
+  {"subject_hash": "fadee89142e34c86", "kind": "audit", "note": "KSM-01 under capstone pepper"},
+  {"subject_hash": "fadee89142e34c86", "kind": "audit", "note": "KSM-01 second audit event"},
+  {"subject_hash": "fadee89142e34c86", "kind": "message", "note": "KSM-01 message event"},
+  {"subject_hash": "33a7aaf8349e749b", "kind": "audit", "note": "VIH-01 single event"}
+]
